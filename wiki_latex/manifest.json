@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Wikipedia LaTeX Extractor",
+    "version": "1.0",
+    "description": "Extract LaTeX formulas from Wikipedia pages",
+    "permissions": ["contextMenus", "activeTab", "downloads"],
+    "background": {
+        "service_worker": "service.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.wikipedia.org/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
